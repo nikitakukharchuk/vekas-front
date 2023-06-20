@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* GENERAL */
+
+.green-custom {
+  color: #37AB48;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* HOME SECTION */
+.home-title {
+  font-size: 50px;
+}
+
+.home-introtext {
+  font-size: 30px;
+  color: #37AB48;
+}
+
+.home-fakes {
+  display: flex;
+  font-size: 30px;
+  color: #37AB48;
+  align-items: center;
+}
+
+.home-fakes::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  background-color: #37AB48;
+  margin: 0 30px;
+}
+
+
+/* ABOUT US SECTION */
+
+.about-us-section {
+  height: 800px;
+}
+
+/* INDUSTRIES */
+
+.qr-code {
+  background: url("../../public/industries/qr.svg") no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 600px;
+}
+
+.industries-list-item {
+  background: rgba(54, 53, 53, 0.65);
+  border-radius: 5px;
+}
+
+.industries-list-item:hover {
+  background: #37AB48;
+  color: #fff;
+  transition: background 0.3s linear;
+}
+
+.Image-Alcohol {
+  right: 99px;
+  top: 50px;
+}
+
+.Icon-Alcohol {
+  right: 130px;
+  top: 30px;
+}
+
+.Image-Cheese {
+  left: 100px;
+  top: 125px;
+}
+
+.Icon-Cheese {
+  left: 130px;
+  top: 105px;
+
+}
+
+.Image-Dairy {
+  left: 274px;
+  top: 199px;
+}
+
+.Icon-Dairy {
+  left: 305px;
+  top: 180px;
+
+}
+
+.Image-Drinks {
+  right: 74px;
+  top: 275px;
+}
+
+.Icon-Drinks {
+  right: 105px;
+  top: 255px;
+
+}
+
+.Image-Ice {
+  left: 100px;
+  bottom: 175px;
+}
+
+.Icon-Ice {
+  left: 130px;
+  bottom: 255px;
+
+}
+
+.Image-Pharmaceutical {
+  right: 99px;
+  bottom: 75px;
+}
+
+.Icon-Pharmaceutical {
+  right: 130px;
+  bottom: 160px;
+
+}
+
+.Image-Tobacco {
+  left: 200px;
+  bottom: 50px;
+}
+
+.Icon-Tobacco {
+  left: 230px;
+  bottom: 130px;
+}
+
+/* ACHIEVEMENTS */
+
+.achievements-card {
+  background: rgba(54, 53, 53, 0.65);
+  border-radius: 20px;
+}
+
+/* BRANDS */
+
+.full-width-section {
+  width: calc(100% + 100px);
+  margin-left: -50px;
+  margin-right: -50px;
+}
+
+@keyframes scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.animate {
+  animation: scroll 30s linear infinite;
+}
+
+.brands {
+  left: 49.5%;
+}
+
+/* Questions */
+
+.question-item {
+  background: rgba(54, 53, 53, 0.65);
+}
+
+footer {
+  background: rgba(54, 53, 53, 0.65);
+}
+
+
+/* MODAL */
+
+.form-textarea {
+  background: #515151;
+}
+
+.form-input {
+  background: #515151;
+}
+
+@media ( min-width: 1024px ) and (max-width: 1280px){
+  .qr-code {
+    height: 450px;
+    width: 450px;
+  }
+
+  .industries-image {
+    width: 75px;
+  }
+  .industries-icon {
+    width: 28px;
+  }
+
+  .Image-Alcohol {
+    right: 93px;
+    top: 37px;
+  }
+
+  .Icon-Alcohol {
+    right: 116px;
+    top: 23px;
+  }
+
+  .Image-Cheese {
+    left: 75px;
+    top: 94px;
+  }
+
+  .Icon-Cheese {
+    left: 99px;
+    top: 80px;
+  }
+
+  .Image-Dairy {
+    left: 208px;
+    top: 150px;
+  }
+
+  .Icon-Dairy {
+    left: 232px;
+    top: 136px;
+  }
+
+  .Image-Drinks {
+    right: 56px;
+    top: 206px;
+  }
+
+  .Icon-Drinks {
+    right: 81px;
+    top: 193px;
+  }
+
+  .Image-Ice {
+    left: 75px;
+    bottom: 131px;
+  }
+
+  .Icon-Ice {
+    left: 99px;
+    bottom: 192px;
+  }
+
+  .Image-Pharmaceutical {
+    right: 74px;
+    bottom: 56px;
+  }
+
+  .Icon-Pharmaceutical {
+    right: 99px;
+    bottom: 117px;
+  }
+
+  .Image-Tobacco {
+    left: 150px;
+    bottom: 37px;
+  }
+
+  .Icon-Tobacco {
+    left: 174px;
+    bottom: 99px;
+  }
+}
+
+@media ( min-width: 768px ) and (max-width: 1023px){
+
+  .home-fakes::after {
+    margin: 0 10px;
+  }
+}
