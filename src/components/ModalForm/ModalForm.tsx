@@ -22,7 +22,7 @@ const ModalForm = ({open, onClose}: ModalType) => {
             Message: data.Message
         }
         const response = await formApi.postForm(payload)
-        console.log(response, 'response')
+        console.log(response.data, 'response')
         reset()
         onClose()
     };
